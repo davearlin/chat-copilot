@@ -27,11 +27,8 @@ import { BotService } from '../services/BotService';
 import { ChatService } from '../services/ChatService';
 import { DocumentImportService } from '../services/DocumentImportService';
 
-import botIcon1 from '../../assets/bot-icons/bot-icon-1.png';
-import botIcon2 from '../../assets/bot-icons/bot-icon-2.png';
-import botIcon3 from '../../assets/bot-icons/bot-icon-3.png';
-import botIcon4 from '../../assets/bot-icons/bot-icon-4.png';
-import botIcon5 from '../../assets/bot-icons/bot-icon-5.png';
+import botIcon2 from '../../assets/bot-icons/eviden-black-monogram.png';
+import botIcon1 from '../../assets/bot-icons/eviden-orange-monogram.png';
 import { FeatureKeys } from '../../redux/features/app/AppState';
 
 export interface GetResponseOptions {
@@ -51,7 +48,7 @@ export const useChat = () => {
     const chatService = new ChatService(process.env.REACT_APP_BACKEND_URI as string);
     const documentImportService = new DocumentImportService(process.env.REACT_APP_BACKEND_URI as string);
 
-    const botProfilePictures: string[] = [botIcon1, botIcon2, botIcon3, botIcon4, botIcon5];
+    const botProfilePictures: string[] = [botIcon1, botIcon2];
 
     const userId = activeUserInfo?.id ?? '';
     const fullName = activeUserInfo?.username ?? '';
